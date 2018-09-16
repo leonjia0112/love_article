@@ -1,5 +1,4 @@
 # Rust asynchronous HTTP server with tokio and hyper
-Article from: https://blog.guillaume-gomez.fr/articles/2017-02-22+Rust+asynchronous+HTTP+server+with+tokio+and+hyper
 
 In the two last weeks, I worked on a project: writing a small REST API server in Rust. The goal was to compare the performance between this one and the one wrote in C. To do so, we decided to use tokio and hyper.
 
@@ -498,3 +497,6 @@ impl ReaderWriter {
     }
 }
 ```
+
+
+From: https://blog.guillaume-gomez.fr/articles/2017-02-22+Rust+asynchronous+HTTP+server+with+tokio+and+hyper
