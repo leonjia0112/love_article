@@ -66,3 +66,5 @@ Once a hard link has been made the link is to the inode. deleting renaming or mo
 Note: Hard links are only valid within the same File System. Symbolic links can span file systems as they are simply the name of another file.*
 
 (http://stackoverflow.com/questions/185899/what-is-the-difference-between-a-symbolic-link-and-a-hard-link)
+
+From: https://medium.com/@wendymayorgasegura/what-is-the-difference-between-a-hard-link-and-a-symbolic-link-8c0493041b62
