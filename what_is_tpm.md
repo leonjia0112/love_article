@@ -1,6 +1,7 @@
 # What is a TPM?
 
 From Matthew Garrett/ May 2013 [here](https://mjg59.dreamwidth.org/24818.html)
+
 TPMs are devices that adhere to the Trusted Computing Group's Trusted Platform Module specification. They're typically microcontrollers[1] with a small amount of flash, and attached via either i2c (on embedded devices) or LPC[2] (on PCs). While designed for performing cryptographic tasks, TPMs are not cryptographic accelerators - in almost all situations, carrying out any TPM operations on the CPU instead would be massively faster[3]. So why use a TPM at all? 
 # Keeping secrets with a TPM
 TPMs can encrypt and decrypt things. They're not terribly fast at doing so, but they have one significant benefit over doing it on the CPU - they can do it with keys that are tied to the TPM. All TPMs have something called a Storage Root Key (or SRK) that's generated when the TPM is initially configured. You can ask the TPM to generate a new keypair, and it'll do so, encrypt them with the SRK (or another key descended from the SRK) and hand it back to you. Other than the SRK (and another key called the Endorsement Key, which we'll get back to later), these keys aren't actually kept on the TPM - the running OS stores them on disk. If the OS wants to encrypt or decrypt something, it loads the key into the TPM and asks it to perform the desired operation. The TPM decrypts the key and then goes to work on the data. For small quantities of data, the secret can even be stored in the TPM's nvram rather than on disk.
