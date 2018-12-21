@@ -98,3 +98,7 @@ func main(){
 echo "Hello, World!"
 ?>
 ```
+
+# Useful Link
+## Unix
+[Introduction to text manipulation on UNIX-based systems](https://www.ibm.com/developerworks/aix/library/au-unixtext/index.html)
