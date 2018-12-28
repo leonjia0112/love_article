@@ -103,5 +103,5 @@ echo "Hello, World!"
 ## Unix
 [Introduction to text manipulation on UNIX-based systems](https://www.ibm.com/developerworks/aix/library/au-unixtext/index.html)
 
-## Editing
+## Code Editor
 [Vim Cheat Sheet](https://devhints.io/vim)
