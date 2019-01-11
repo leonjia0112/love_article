@@ -126,10 +126,16 @@ This implies that there needs to be task in the first place that can isolate the
 users. Because tasks furthermore are actually threads the cost of encapsulating every function call in a thread does not 
 sound very appealing.
 
-Today you already are in the situation in Rust that if you write a library that wants to export a C ABI and is used by other people you can already not call into functions that panic unless you are in the situation where your system is generally running a thread and you dispatch messages into it.
+Today you already are in the situation in Rust that if you write a library that wants to export a C ABI and is used by other 
+people you can already not call into functions that panic unless you are in the situation where your system is generally 
+running a thread and you dispatch messages into it.
 
 ## Panicking Less and Disabling Unwinding
-I wish I personally have for the language is that you can write code that is guaranteed to not panic unless it really ends up in a situation where it has no other choice. The biggest areas of concern there are traditionally memory allocations. However in the vast majority of situations failure from memory allocation is actually not something you need to be concerned with. Modern operating systems make it quite hard to end up in a situation where an allocation fails. There is virtual memory management and swapping and OOM killers. An malloc that returns null in a real world situation, other than by passing an unrealistically large size, is quite uncommon. And on embedded systems or similar situations you usually already keep an eye on if you are within your budget and you just avoid ever hitting the limit. This allocation problem is also a lot smaller if you are you a specialized context where you just avoid generic containers that allocate memory on regular operations.
+I wish I personally have for the language is that you can write code that is guaranteed to not panic unless it really ends 
+up in a situation where it has no other choice. The biggest areas of concern there are traditionally memory allocations. 
+However in the vast majority of situations failure from memory allocation is actually not something you need to be concerned 
+with. Modern operating systems make it quite hard to end up in a situation where an allocation fails. There is virtual 
+memory management and swapping and OOM killers. An malloc that returns null in a real world situation, other than by passing an unrealistically large size, is quite uncommon. And on embedded systems or similar situations you usually already keep an eye on if you are within your budget and you just avoid ever hitting the limit. This allocation problem is also a lot smaller if you are you a specialized context where you just avoid generic containers that allocate memory on regular operations.
 
 Once panics are unlikely to happen, it's an option to disable the support for unwinding and to just abort the application if a panic ever happens. While this sounds pretty terrible, this is actually the right thing to do for a wide range of environments.
 
