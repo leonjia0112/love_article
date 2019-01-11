@@ -103,7 +103,13 @@ stack unwinding. There is some standardization on some operating systems but eve
 used. For instance on Windows there is Structured Exception Handling (SEH) which however is not used by LLVM currently and 
 as such not by Rust.
 
-If the stack unwinding is not standardized between different languages it automatically limits the usefulness. For instance if you want to use a C++ library from another programming language, your best bet is actually to expose a C interface for it. This also means that any function you invoke through the C wrapper needs to catch down all exceptions and report them through an alternative mechanism out, making it more complicated for everybody. This even causes quite a bit of pain in the absence of actually going through a programming language boundary. If you ever used the PPL libraries (a framework for asynchronous task handling and parallelism) on Windows you might have seen how it internally catches down exceptions and reconstructs them in other places to make them travel between threads safely.
+If the stack unwinding is not standardized between different languages it automatically limits the usefulness. For instance 
+if you want to use a C++ library from another programming language, your best bet is actually to expose a C interface for 
+it. This also means that any function you invoke through the C wrapper needs to catch down all exceptions and report them 
+through an alternative mechanism out, making it more complicated for everybody. This even causes quite a bit of pain in the 
+absence of actually going through a programming language boundary. If you ever used the PPL libraries (a framework for 
+asynchronous task handling and parallelism) on Windows you might have seen how it internally catches down exceptions and 
+reconstructs them in other places to make them travel between threads safely.
 
 The second problem with stack unwinding is that it's really complex. In order to unwind a stack you need to figure out what your parent frame actually is. This is not necessarily a simple thing to do. On AMD64 for instance there is not enough information available on the stack to find higher stack frames so your only option is to implement the very complex DWARF spec or change the calling conventions so that you do have enough meta information on the stack. This might be simple for a project that has full control of all dependencies, but the moment you call into a library you did not compile, this no longer works.
 
