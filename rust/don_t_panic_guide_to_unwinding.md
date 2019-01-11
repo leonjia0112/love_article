@@ -116,9 +116,15 @@ The second problem with stack unwinding is that it's really complex. In order to
 It's no surprise that stack unwinding traditionally is one of the worse supported features in programming languages. It's not unheard of that a compiler does not implement exceptions for C++ and the reason for this is that stack unwinding is a complex thing. Even if they do implement it, very often exceptions are just made to work but not made to be fast.
 
 ## Exceptions in a Systems Language
-You don't have to be a kernel developer to not be a fan of stack unwinding. Any person that wants to develop a shared library that is used by other people will sooner or later have to think about how to prevent things from throwing exceptions. In C++ it's not hard to actually wrap all exported functions in huge try / catch blocks that will just catch down everything and report a failure code out, but in Rust it's currently actually a bit more complex.
+You don't have to be a kernel developer to not be a fan of stack unwinding. Any person that wants to develop a shared 
+library that is used by other people will sooner or later have to think about how to prevent things from throwing 
+exceptions. In C++ it's not hard to actually wrap all exported functions in huge try / catch blocks that will just catch 
+down everything and report a failure code out, but in Rust it's currently actually a bit more complex.
 
-The reason for this is that in Rust you cannot actually handle exceptions. When a function panics it terminates the task. This implies that there needs to be task in the first place that can isolate the exception or you cause issues for your users. Because tasks furthermore are actually threads the cost of encapsulating every function call in a thread does not sound very appealing.
+The reason for this is that in Rust you cannot actually handle exceptions. When a function panics it terminates the task. 
+This implies that there needs to be task in the first place that can isolate the exception or you cause issues for your 
+users. Because tasks furthermore are actually threads the cost of encapsulating every function call in a thread does not 
+sound very appealing.
 
 Today you already are in the situation in Rust that if you write a library that wants to export a C ABI and is used by other people you can already not call into functions that panic unless you are in the situation where your system is generally running a thread and you dispatch messages into it.
 
