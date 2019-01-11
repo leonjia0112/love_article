@@ -1,5 +1,6 @@
 # Don't Panic! The Hitchhiker's Guide to Unwinding
 written on Thursday, October 30, 2014 [here](http://lucumr.pocoo.org/2014/10/30/dont-panic/)
+(Armin Ronacher's Thoughts and Writings)
 
 Rust has an awesome developer community but sometimes emotions can cloud the discussions that are taking place. One of the more interesting discussions (or should I say flamewars) evolve around the concept of stack unwinding in Rust. I consider myself very strongly on one side of this topic but I have not been aware of how hot this topic is until I accidentally tweeted by preference. Since then I spent a bit of time reading up no the issue and figured I might write about it since it is quite an interesting topic and has huge implications on how the language works.
 
