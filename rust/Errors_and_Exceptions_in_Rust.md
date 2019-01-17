@@ -97,4 +97,16 @@ We don’t care that our returned value is an `Option<T>` instead of the plain v
 
 We can live in a world without `NULL`s. It sounds kinda like a dream, doesn’t it? But it’s real.
 
+### `Result<T, E>`
+This thing really looks like an exception class. If `option` types represent a possibility for a value to exists, `result` types represent a success or a failure of a task (i.e. the creation of a file).
 
+Basically it works like `Option<T>`, but instead of accepting `Some(T)` or `None`, these options are replaced by `Ok(T)` and `Err(E)`. `Ok(T)` basically works exactly like `Some(T)`, encapsulating a generic value, while `Err(E)` is a wrapper for a value that represents the error (as it is generic, despite what it can looks like, it can be whatever thing you like, a string containing an error message included).
+
+## What about errors?
+Initially we said that errors are unexpected and unusual situations in which the program can end into.
+
+Most of the languages represents the most common errors with actual exceptions (i.e. `OutOfMemoryError`) but they’re not really supposed to be handled, and so what they do is only giving a reasonable message about the reason of the crash of the application.
+
+Smart compilers like Rust’s help avoiding errors in compile time, providing strict rules and checkings on everything the programmer does, like the ones related to the memory management.
+
+In case of errors like an index out of an array’s bound (which index could be inputted by the user and cannot always be expected, for example), actually there’s a brand new `panic::catch_unwind()` method that does exactly what `Try...catch` or `Begin...rescue` do, but it needs to be used conscientiously, as it is not a shorthand for `option` and `result` types. Please read [Rust 1.9 announcement](https://blog.rust-lang.org/2016/05/26/Rust-1.9.html) to learn more about catching `panic!`s and more.
