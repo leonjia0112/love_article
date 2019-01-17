@@ -28,13 +28,13 @@ Let’s see shortly what in practice this does mean exemplifying with a language
 
 ## Exception handling in Rust
 
-This section wants to go a little deeper on what it’s been said previously. Please look at [this article]() and the [Rust book](https://doc.rust-lang.org/book/) for a great learning about this!
+This section wants to go a little deeper on what it’s been said previously. Please look at [this article](./error_handling_in_rust.md) and the [Rust book](https://doc.rust-lang.org/book/) for a great learning about this!
 
 As said, talking about exceptions, the only tools Rust gives to developers are `Option<T>` and `Result<T, E>`. They are everything but magic, being so easy that you can implement them by yourself in a couple of lines, as done in the article linked above. And they are terribly optimized in compile-time too, so that their usage is almost cost-free.
 
 ### `Option<T>`
 I’m the kind of person who prefers to leave the code to talk for itself. Please have a look at this snippet:
-```
+```rust
 use std::collections::HashMap;
 
 fn print_inventory(book_name: &str, book: Option<&u32>) {
@@ -62,7 +62,7 @@ Instead of using pattern matching we can also `unwrap()` the value directly in t
 
 It is quite a double edged weapon though. If the `Option<T>` `is_none()`, meaning that it has not a value encapsulated, it will `panic!` as you can see here.
 
-```
+```rust
 use std::collections::HashMap;
 
 fn print_inventory(book_name: &str, book: Option<&u32>) {
