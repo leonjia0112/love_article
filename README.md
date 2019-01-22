@@ -105,3 +105,8 @@ echo "Hello, World!"
 
 ## Code Editor
 [Vim Cheat Sheet](https://devhints.io/vim)
+
+## Git
+### Git Basics
+[Adding more changes to your last commit](https://medium.com/@igor_marques/git-basics-adding-more-changes-to-your-last-commit-1629344cb9a8)
+
