@@ -110,3 +110,5 @@ echo "Hello, World!"
 ### Git Basics
 [Adding more changes to your last commit](https://medium.com/@igor_marques/git-basics-adding-more-changes-to-your-last-commit-1629344cb9a8)
 
+## Vim
+[Install the Vim 8.0 and YouCompleteMe with Make on CentOS 7.4](https://medium.com/@chusiang/install-the-vim-8-0-and-youcompleteme-with-make-on-centos-7-4-1573ad780953)
