@@ -112,3 +112,6 @@ echo "Hello, World!"
 
 ## Vim
 [Install the Vim 8.0 and YouCompleteMe with Make on CentOS 7.4](https://medium.com/@chusiang/install-the-vim-8-0-and-youcompleteme-with-make-on-centos-7-4-1573ad780953)
+
+[Vim 8.0 Released, the First Major Update Since 2006](https://www.linuxbabe.com/vim/install-vim-8-0-debian-ubuntu-linux-mint-fedora-centos-arch-linux)
+
