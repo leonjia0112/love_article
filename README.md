@@ -118,3 +118,5 @@ echo "Hello, World!"
 
 [Vim 8.0 Released, the First Major Update Since 2006](https://www.linuxbabe.com/vim/install-vim-8-0-debian-ubuntu-linux-mint-fedora-centos-arch-linux)
 
+## Python
+[Python Decorator](https://www.programiz.com/python-programming/decorator)
