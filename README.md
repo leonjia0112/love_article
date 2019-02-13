@@ -120,3 +120,7 @@ echo "Hello, World!"
 
 ## Python
 [Python Decorator](https://www.programiz.com/python-programming/decorator)
+
+## Ansible
+Understand Ansible Role and how does it work.
+[Roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
