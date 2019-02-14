@@ -5,6 +5,9 @@
 要先说这个编译安装过程，使用命令aclocal会生成m4文件，aclocal本质上是一个perl脚本。先提提m4, m4是一种宏处理器，它是 POSIX 标准的一部分。为什么叫m4呢，全称是macro,m后面有4个字母，据说是这样的，哈哈。摘录一段对于m4的描述:从图灵的角度来看 m4，输入流与输出流可以衔接起来构成一条无限延伸的纸带，m4 是这条纸带的读写头，所以 m4 是一种图灵机。m4 的计算能力与任何一种编程语言等同，区别只体现在编程效率以及所编写的程序的运行效率方面。
 然后是autoconf，是生成configure文件的，configure是一个脚本，它能设置源程序来适应各种不同的操作系统平台，并且根据不同的系统来产生合适的Makefile，从而可以使你的源代码能在不同的操作系统平台上被编译出来。
 最后是automake用来生成Makefile.in文件
+
+![Process graph](https://github.com/leonjia0112/love_article/blob/master/etc/configure_make_graph.jpg)
+
 简单总结一下，这个编译过程涉及几个命令工具，大体的功能点如下。
 aclocal # 产生 aclocal.m4
 autoconf # 根据 configure.in 生成configure
