@@ -124,3 +124,6 @@ echo "Hello, World!"
 ## Ansible
 Understand Ansible Role and how does it work.
 [Roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
+
+## Linux Admin
+[Understanding Systemd Units and Unit Files](https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files)
