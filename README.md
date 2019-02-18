@@ -122,8 +122,8 @@ echo "Hello, World!"
 [Python Decorator](https://www.programiz.com/python-programming/decorator)
 
 ## Ansible
-Understand Ansible Role and how does it work.
-[Roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
+[Understand Ansible Role and how does it work](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
 
 ## Linux Admin
 [Understanding Systemd Units and Unit Files](https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files)
+[RHEL Boot Process](./RHEL_boot_process.md)
