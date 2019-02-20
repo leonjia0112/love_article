@@ -111,6 +111,8 @@ echo "Hello, World!"
 ### Git Basics
 [Adding more changes to your last commit](https://medium.com/@igor_marques/git-basics-adding-more-changes-to-your-last-commit-1629344cb9a8)
 
+## Shell
+[pushd and popd example](./pushd_and_popd_example.md)
 ## Vim
 #### Vim Basic
 [Converting tabs to spaces](http://vim.wikia.com/wiki/Converting_tabs_to_spaces)
