@@ -131,3 +131,6 @@ echo "Hello, World!"
 [Understanding Systemd Units and Unit Files](https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files)
 
 [RHEL Boot Process](./RHEL_boot_process.md)
+
+## SSH
+[How to Set up an SSH Server on a Home Computer](https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer)
