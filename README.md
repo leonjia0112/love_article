@@ -140,3 +140,6 @@ echo "Hello, World!"
 
 ## OS installation
 [How to Install Fedora 29 Alongside With Windows 10 or 8 in Dual-Boot](https://www.tecmint.com/install-fedora-27-with-windows-10-or-8-in-dual-boot/)
+
+## RPM
+[RPM Packaging Guide](https://rpm-packaging-guide.github.io/#preparing-source-code-for-packaging)
