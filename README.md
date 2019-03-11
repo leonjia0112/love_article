@@ -130,6 +130,13 @@ echo "Hello, World!"
 ## Linux Admin
 [Understanding Systemd Units and Unit Files](https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files)
 
+[FEDORA 22: SETTING A STATIC IP ADDRESS](https://danielgibbs.co.uk/2015/07/fedora-22-setting-a-static-ip-address/)
+
+Note:
+```
+# chattr +i /etc/resolv.conf
+```
+
 [RHEL Boot Process](./RHEL_boot_process.md)
 
 ## SSH
