@@ -113,9 +113,11 @@ echo "Hello, World!"
 
 ## Shell
 [pushd and popd example](./pushd_and_popd_example.md)
+
 ## Vim
 #### Vim Basic
 [Converting tabs to spaces](http://vim.wikia.com/wiki/Converting_tabs_to_spaces)
+
 #### Useful Link
 [Install the Vim 8.0 and YouCompleteMe with Make on CentOS 7.4](https://medium.com/@chusiang/install-the-vim-8-0-and-youcompleteme-with-make-on-centos-7-4-1573ad780953)
 
@@ -155,4 +157,5 @@ Note:
 
 ## RPM
 [RPM Packaging Guide](https://rpm-packaging-guide.github.io/#preparing-source-code-for-packaging)
+
 [Macros: Helpful Shorthand for Package Builders](http://ftp.rpm.org/max-rpm/s1-rpm-inside-macros.html)
