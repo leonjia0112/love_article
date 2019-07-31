@@ -145,6 +145,8 @@ Note:
 
 [RHEL Boot Process](./RHEL_boot_process.md)
 
+## GPG
+[Secure email: Encrypt and sign your emails with PGP/GnuPG](https://bjornjohansen.no/secure-email)
 ## SSH
 [How to Set up an SSH Server on a Home Computer](https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer)
 
