@@ -165,3 +165,6 @@ Note:
 [RPM Packaging Guide](https://rpm-packaging-guide.github.io/#preparing-source-code-for-packaging)
 
 [Macros: Helpful Shorthand for Package Builders](http://ftp.rpm.org/max-rpm/s1-rpm-inside-macros.html)
+
+## Firefox
+[Hide Tab Bar w/ Vertical Tab](https://medium.com/@Aenon/firefox-hide-native-tabs-and-titlebar-f0b00bdbb88b)
