@@ -111,6 +111,7 @@ echo "Hello, World!"
 ### Git Basics
 [Adding more changes to your last commit](https://medium.com/@igor_marques/git-basics-adding-more-changes-to-your-last-commit-1629344cb9a8)
 [How to Git PR From The Command Line](https://hackernoon.com/how-to-git-pr-from-the-command-line-a5b204a57ab1)
+[How to write a git commit message](https://chris.beams.io/posts/git-commit/)
 
 ## Shell
 [pushd and popd example](./pushd_and_popd_example.md)
